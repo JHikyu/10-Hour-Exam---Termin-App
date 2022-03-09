@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>Web-Technologien</title>
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/abstimmungErstellen.css">
+    <link rel="stylesheet" href="/css/abstimmungErstellenPhone.css">
+</head>
+<body>
+  <header>
+    <h1>Erstelle eine Abstimmung</h1>
+
+    <nav>
+        <a href="/">Startseite</a>
+        <a href="/abstimmungErstellen" class="active">Abstimmung erstellen</a>
+    </nav>
+</header>
+
+
+    <main>
+      <form action="/create-send" method="post">
+        <label for="name">Name der Abstimmung</label>
+        <input type="text" name="name" placeholder="Musterklausur" required minlength="3" maxlength="100">
+
+        <label for="beschreibung">Beschreibung</label>
+        <textarea cols="50" rows="5" name="beschreibung"></textarea>
+
+        <label for="termineCount">Anzahl der Termine</label>
+        <input type="number" name="termineCount" id="termineCount" value="2" min="2">
+
+        
+        <label for="termine">Termine</label>
+        <fieldset id="termine" name="termine">
+
+          <label for="termin-1">Termin 1</label>
+          <fieldset name="termin-1">
+            <label for="termin-1-datum">Datum: </label>
+            <input type="date" name="termin-1-datum" required>
+
+            <label for="termin-1-start">Start: </label>
+            <input type="time" name="termin-1-start" required>
+
+            <label for="termin-1-ende">Ende: </label>
+            <input type="time" name="termin-1-ende" required>
+          </fieldset>
+
+          <label for="termin-2">Termin 2</label>
+          <fieldset name="termin-2">
+            <label for="termin-2-datum">Datum: </label>
+            <input type="date" name="termin-2-datum" required>
+
+            <label for="termin-2-start">Start: </label>
+            <input type="time" name="termin-2-start" required>
+
+            <label for="termin-2-ende">Ende: </label>
+            <input type="time" name="termin-2-ende" required>
+          </fieldset>
+
+        </fieldset>
+
+        <button type="submit">Erstellen</button>
+      </form>
+    </main>
+
+
+    <footer>
+      <p>Erstellt von Justin Rost. Matrikelnummer: 7208260</p>
+    </footer>
+
+    <script src="/js/createTermineChange.js"></script>
+</body>
+</html>

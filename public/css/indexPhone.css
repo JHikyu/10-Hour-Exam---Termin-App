@@ -1,0 +1,9 @@
+@media screen and (max-width: 992px) {
+  /*? Main */
+  main {
+    flex-direction: column;
+  }
+  main p {
+    margin: 0;
+  }
+}

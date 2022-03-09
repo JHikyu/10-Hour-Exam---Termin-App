@@ -1,0 +1,57 @@
+body {
+  height: 100vh;
+  overflow: hidden;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  padding: 2rem 0;
+  gap: 1rem;
+}
+
+footer {
+  display: grid;
+  place-items: center;
+  padding: 1rem;
+}
+
+main > section {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+
+section button, form button {
+  padding: .5rem 1rem;
+
+  background: var(--background);
+  color: var(--text);
+  border: none;
+  text-align: center;
+  transition: all .1s;
+}
+section button:hover, form button:hover {
+  background: var(--text-active);
+  cursor: pointer;
+}
+section button.active {
+  background: var(--text-active);
+}
+
+form input {
+  color: var(--text-dark);
+}
+form input::placeholder {
+  color: gray;
+}
+
+form input {
+  padding: .5rem 1rem;
+  color: var(--text-dark);
+  font-weight: 600;
+}
+
+h2, p {
+  margin: 0;
+}

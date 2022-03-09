@@ -1,0 +1,42 @@
+main {
+  padding: 0 8rem;
+}
+
+form {
+  display: grid;
+  gap: 1rem;
+
+  padding: 2rem 0;
+}
+
+footer {
+  display: grid;
+  place-items: center;
+  padding: 1rem;
+}
+
+label {
+  color: var(--text);
+}
+
+form button {
+  padding: .5rem 1rem;
+
+  background: var(--background);
+  color: var(--text);
+  border: none;
+  font-size: 1.25rem;
+  text-align: center;
+  transition: all .1s;
+}
+form button:hover {
+  background: var(--text-active);
+  cursor: pointer;
+}
+
+form input {
+  color: var(--text-dark);
+}
+form input::placeholder {
+  color: gray;
+}

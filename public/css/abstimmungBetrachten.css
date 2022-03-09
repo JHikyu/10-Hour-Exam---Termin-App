@@ -1,0 +1,42 @@
+body {
+  height: 100vh;
+  overflow: hidden;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+}
+
+footer {
+  display: grid;
+  place-items: center;
+  padding: 1rem;
+}
+
+section {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+section fieldset {
+  background: var(--text)
+}
+section fieldset p {
+  color: var(--background);
+  font-weight: 600;
+  margin: .5rem;
+}
+
+table, th, td {
+  border: 1px solid;
+  border-collapse: collapse;
+}
+td, th {
+  padding: .5rem;
+  text-align: center;
+}
+tr:hover {
+  background: var(--text-active);
+}

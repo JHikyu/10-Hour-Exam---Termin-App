@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web-Technologien</title>
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/abstimmungBetrachten.css">
+</head>
+<body>
+    <header>
+        <h1>Termin-App</h1>
+
+        <nav>
+            <a href="/">Startseite</a>
+            <a href="/abstimmungErstellen">Abstimmung erstellen</a>
+        </nav>
+    </header>
+
+
+    <main>
+        <h2><%= abstimmung.name %></h2>
+        <p><%= abstimmung.beschreibung %></p>
+        
+        <h3>Termine</h3>
+        <section>
+            <% abstimmung.termine.forEach((termin) => { %>
+                <fieldset>
+                    <p><%= termin.datum %> | <%= termin.start %>-<%= termin.ende %></p>
+
+                    <table>
+                        <thead>
+                            <tr>
+                            <th>#</th>
+                            <th>Name</th>
+                            <th>Option</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <% termin.stimmen.forEach((stimme, id) => { %>
+                            <tr>
+                                <td><%= id %></td>
+                                <td><%= stimme.name %></td>
+                                <td><%= stimme.option %></td>
+                            </tr>
+                            <% }) %>
+                        </tbody>
+                    </table>
+                    
+                </fieldset>
+            <% }) %>
+        </section>
+    </main>
+
+
+    <footer>
+      <p>Erstellt von Justin Rost. Matrikelnummer: 7208260</p>
+    </footer>
+</body>
+</html>

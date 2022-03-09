@@ -1,0 +1,10 @@
+@media screen and (max-width: 992px) {
+  main {
+    padding: 0;
+  }
+
+  fieldset > fieldset {
+    display: flex;
+    flex-direction: column;
+  }
+}

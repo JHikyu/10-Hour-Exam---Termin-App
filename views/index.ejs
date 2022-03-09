@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web-Technologien</title>
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/index.css">
+    <link rel="stylesheet" href="/css/indexPhone.css">
+</head>
+<body>
+    <header>
+        <h1>Termin-App</h1>
+
+        <nav>
+            <a href="/" class="active">Startseite</a>
+            <a href="/abstimmungErstellen">Abstimmung erstellen</a>
+        </nav>
+    </header>
+
+
+    <main>
+
+        <section>
+            <form action="/abstimmungTeilnehmen" method="get">
+                <% if (typeof error !== 'undefined') { %>
+                    <input type="text" name="tCode" placeholder="Teilnahme Code" class="error" required>
+                <% } else if (typeof success !== 'undefined') { %>
+                    <input type="text" name="tCode" placeholder="Teilnahme Code" class="success" required>
+                <% } else { %>
+                    <input type="text" name="tCode" placeholder="Teilnahme Code" required>
+                <% } %>
+                <button>Teilnehmen</button>
+            </form>
+        </section>
+        
+        <p>ODER</p>
+
+        <section>
+            <form action="/abstimmungBetrachten" method="get">
+                <% if (typeof adminError !== 'undefined') { %>
+                    <input type="text" name="aCode" placeholder="Administrations Code" class="error" required>
+                <% } else { %>
+                    <input type="text" name="aCode" placeholder="Administrations Code" required>
+                <% } %>
+                <button>Übersicht</button>
+            </form>
+        </section>
+
+    </main>
+
+
+
+    <footer>
+        <p>Erstellt von Justin Rost. Matrikelnummer: 7208260</p>
+    </footer>
+</body>
+</html>
